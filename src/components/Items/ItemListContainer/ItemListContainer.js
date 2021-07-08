@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
-
+const useParams = require("react-router-dom").useParams;
 function ItemListContainer() {
-  //const [cantidad,setCantidad] = useState(0);
   const [itemList,setItemList] = useState([]);
-  const tempItemList = [{ id:1, title : "Producto 1", description: "Descripcion 1", price: "10", pictureUrl:"https://i.pinimg.com/564x/29/33/62/293362396463d58ad3e03bab526d48ee.jpg" },{ id:2, title : "Producto 2", description: "Descripcion 2", price: "20", pictureUrl:"https://d2h1pu99sxkfvn.cloudfront.net/b0/13275942/559334279_BsMzaN0A9I/P0.jpg" },{ id:3, title : "Producto 3", description: "Descripcion 3", price: "30", pictureUrl:"https://i.ebayimg.com/images/g/VHcAAOSw-RlfludU/s-l400.jpg" },{ id:4, title : "Producto 4", description: "Descripcion 4", price: "40", pictureUrl:"https://media.karousell.com/media/photos/products/2020/10/16/blackpink_rose_photocard_1602825176_2f6ca203_progressive.jpg" } ];
+  const { categoryId } = useParams();
+
 
   const onAdd = (cantidadVar) => {
     //setCantidad(0);
@@ -14,15 +14,30 @@ function ItemListContainer() {
 
   
   useEffect(() => {
-    var miPromise = new Promise(function(resolve, reject) {
-      setTimeout(function(){
-          resolve(tempItemList); 
+      setTimeout(function(){ 
+          //obtengo la data de un json con productos
+          fetch('../mockData/productos.json'
+          ,{
+            headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            }
+          }
+          )
+            .then(function(response){
+              
+              return response.json();
+              })
+              .then(function(items) {
+                let category = items.filter( category => category.id === categoryId)[0]
+                if(category){
+                  setItemList([...category.items]);          
+                }
+              });
+           
         }, 2000);
-      });
-      miPromise.then(function(items)  {
-        setItemList([...items]);          
-      });
-  }, []);
+     
+  }, [categoryId]);
     
 
 
@@ -33,6 +48,8 @@ function ItemListContainer() {
          
            <ItemCount initialStock={5} initial={0} onAdd={ onAdd}></ItemCount>
           
+           {/* <ItemDetailContainer ></ItemDetailContainer>  solo para test*/}
+
         </div>)
 }
 

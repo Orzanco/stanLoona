@@ -2,23 +2,23 @@ import React from 'react';
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
+
+const Link = require("react-router-dom").Link;
+const NavLink = require("react-router-dom").NavLink;
+
 function NabVar() {
-    const categoryList = ["Photocards","Albums","Lighsticks"];
-    const categoryClick = () =>
-    {
-      
-    }
+    const categoryList = [{"id" : 1 ,"description" : "Photocards"} ,{ "id":2 ,"description":"Albums"},{ "id":3 ,"description":"Lightsticks"}];
+   
     return (
-        <div  className="navBar">
-            <label className ="centerVertical">BiBi Store </label>
+        <div  className="navBar marginBottom1">
+            <Link className ="centerVertical" to = "/"><img width="250px" alt="brand" src="/brand.png"></img></Link>
 
             <Breadcrumbs aria-label="breadcrumb" className="white right10 centerVertical">
                 {categoryList.map((element,index) => {
                     return (
-                                <Link key={index} id={index} className="white right10" href="/" onClick={categoryClick}>
-                                    {element}
-                                </Link>
+                                <NavLink key={index} id={index} className="white right10 noDecoration" to={"/category/" + element.id } >
+                                    {element.description}   
+                                </NavLink>
                 
 
                     )})

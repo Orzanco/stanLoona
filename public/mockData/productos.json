@@ -1,0 +1,22 @@
+[
+    { "id" : "1", "description" : "Photocards", "items" : [
+        { "id":1, "title" : "Photocard 1", "description": "Descripcion producto de Photocard 1", "price": "10", "pictureUrl":"https://i.pinimg.com/originals/a6/66/e3/a666e3202607ada0faf8b3d1a9c786ac.jpg" },
+        { "id":2, "title" : "Photocard 2", "description": "Descripcion producto de Photocard 2", "price": "20", "pictureUrl":"https://i.pinimg.com/originals/2c/27/c2/2c27c2d4d0c1bf58ca1443de40111e6f.jpg" },
+        { "id":3, "title" : "Photocard 3", "description": "Descripcion producto de Photocard 3", "price": "30", "pictureUrl":"https://i.pinimg.com/originals/28/ff/8c/28ff8cf81df21a57eca581205a98257d.jpg" },
+        { "id":4, "title" : "Photocardo 4", "description": "Descripcion producto de Photocard 4", "price": "40", "pictureUrl":"https://www.picclickimg.com/d/l400/pict/174411754991_/K-Pop-Loona-2020-Summer-Package-Concept-Zone-Official.jpg" }
+        ]  },
+    { "id" : "2", "description" : "Ceramica", "items" : [
+        { "id":5, "title" : "Album 1", "description": "Descripcion producto de Albuma 1", "price": "50", "pictureUrl":"https://allinkpop.com/pub/media/catalog/product/cache/6e0c7d68bc3a7847c29d481c625707b1/l/o/loona_kim_lip.png" },
+        { "id":6, "title" : "Album 2", "description": "Descripcion producto de Album 2", "price": "60", "pictureUrl":"https://kpopultra.net/image/cache/catalog/bts-merchandise/bts-album/k-pop-monthly-girl-loona-yves-single-album-b-ver-cdphotobookphotocard-sealeda-800x800.jpg" },
+        { "id":7, "title" : "Album 3", "description": "Descripcion producto de Album 3", "price": "70", "pictureUrl":"https://images-na.ssl-images-amazon.com/images/I/61NCEywOrcL._AC_SY679_.jpg" },
+        { "id":8, "title" : "Album 4", "description": "Descripcion producto de Album 4", "price": "80", "pictureUrl":"https://cf.shopee.co.id/file/dd54d01a927bede965efbcf290560c53" }
+        ]  },
+    { "id" : "3", "description" : "Metal", "items" : [
+        { "id":9, "title" : "Lightstick 1", "description": "Descripcion producto de Lightstick 1", "price": "90", "pictureUrl":"http://d3ugyf2ht6aenh.cloudfront.net/stores/979/208/products/loona1-49c27be90f04a2096816109817237976-640-0.jpg" },
+        { "id":10, "title" : "Lightstick 2", "description": "Descripcion producto de Lightstick 2", "price": "95", "pictureUrl":"https://i.ebayimg.com/images/g/WQIAAOSwyKBfaXim/s-l300.jpg" },
+        { "id":11, "title" : "Lightstick 3", "description": "Descripcion producto de Lightstick 3", "price": "98", "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_988068-MLM44381368488_122020-O.jpg" },
+        { "id":12, "title" : "Lightstick 4", "description": "Descripcion producto de Lightstick 4", "price": "99", "pictureUrl":"https://cdn.shopify.com/s/files/1/1374/2665/products/1_51503df1-f09a-4d62-ac7a-f0f94d0a935f.jpg?v=1593953467" }
+        ]  }
+
+]
+
