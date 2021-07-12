@@ -1,47 +1,40 @@
+import React from 'react';
 import './App.css';
-import NabVar from './components/NavBar/NavBar'
-import ItemListContainer from './components/Items/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/Items/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter as Router,Route, Switch } from 'react-router-dom'
+// componentes
+import Header from './components/Header/Header';
+import Foter from './components/Foter/Foter';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+// views
+import Home from './views/Home/Home'
+import Membresia from './views/Membresia/Membresia'
+import Nosotros from './views/Nosotros/Nosotros'
+import Contacto from './views/Contacto/Contacto'
 
-function App() {
-  return (
-    <Router>
-    <NabVar/>
-    <div className="App">
-      {/* <nav>
-          <ul>
-            <li>
-              <Link to="/item/lista">Lista container</Link>
-            </li>
-            <li>
-              <Link to="/item/listaSola">Contador con un NAN</Link>
-            </li>
-            
-          </ul>
-        </nav> */}
-      
-      <Switch>
-        <Route exact path="/">
-          <ItemListContainer />
-        </Route>
-        <Route path="/category/:categoryId">
-          <ItemListContainer />
-        </Route>
-        <Route path="/item/:itemId">
-          <ItemDetailContainer/>
-        </Route>
-          
-      </Switch>
-    </div>
-    </Router>
-  );
-  
-}
+// context
+import {CartProvider} from './CartContext';
+
+function App(){
+
+
+    return(
+      <>
+      <CartProvider>
+        <Router>
+          <Header/>
+          <body>
+            <Switch>
+              <Route path='/' exact  component={Home}/>
+              <Route path='/membresia' component={Membresia}/>
+              <Route path='/nosotros' component={Nosotros}/>
+              <Route path='/contacto' component={Contacto}/>
+            </Switch>
+            <Foter/>  
+          </body>
+        </Router>
+      </CartProvider>
+      </>
+    );
+  }
 
 export default App;

@@ -1,0 +1,65 @@
+[
+    {
+        "id":1,
+        "nombre":"Blackpink Kill this love",
+        "precio":60000,
+        "imagen":"images/es1.jpg",
+        "descripcion":"Kill this love",
+        "puntuacion":10,
+        "destacado":false
+    },
+    {
+        "id":2,
+        "nombre":"Loona KimLip Solo album",
+        "precio":60000,
+        "imagen":"images/es2.jpg",
+        "descripcion":"KimLip Solo album",
+        "puntuacion":10,
+        "destacado":false
+    },
+    {
+        "id":3,
+        "nombre":"Loona Heejin Solo album",
+        "precio":59900,
+        "imagen":"images/es3.jpg",
+        "descripcion":"Heejin Solo album",
+        "puntuacion":10,
+        "destacado":false
+    },
+    {
+        "id":4,
+        "nombre":"BlackPink The album",
+        "precio":60000,
+        "imagen":"images/es4.jpg",
+        "descripcion":"BlackPink The album",
+        "puntuacion":10,
+        "destacado":false
+    },
+    {
+        "id":5,
+        "nombre":"BTS LY ",
+        "precio":249900,
+        "imagen":"images/va1.jpg",
+        "descripcion":"BTS LY TEAR",
+        "puntuacion":10,
+        "destacado":true
+    },
+    {
+        "id":6,
+        "nombre":"Loona Chuu Solo album",
+        "precio":249900,
+        "imagen":"images/va2.jpg",
+        "descripcion":"Loona Chuu Solo album",
+        "puntuacion":10,
+        "destacado":true
+    },
+    {
+        "id":7,
+        "nombre":"Itzy It'z Me",
+        "precio":169900,
+        "imagen":"images/va3.jpg",
+        "descripcion":"Itzy It'z Me",
+        "puntuacion":10,
+        "destacado":true
+    }
+]
